@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_smart_traffic_controller_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_smart_traffic_controller" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="448308271fs"></ZoomEndTime>
+      <Cursor1Time time="235000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="181"></NameColumnWidth>
+      <ValueColumnWidth column_width="124"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="49" />
+   <wvobject fp_name="/tb_smart_traffic_controller/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ns_density" type="array">
+      <obj_property name="ElementShortName">ns_density[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ns_density[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ew_density" type="array">
+      <obj_property name="ElementShortName">ew_density[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ew_density[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ns_red" type="logic">
+      <obj_property name="ElementShortName">ns_red</obj_property>
+      <obj_property name="ObjectShortName">ns_red</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ns_yellow" type="logic">
+      <obj_property name="ElementShortName">ns_yellow</obj_property>
+      <obj_property name="ObjectShortName">ns_yellow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ns_green" type="logic">
+      <obj_property name="ElementShortName">ns_green</obj_property>
+      <obj_property name="ObjectShortName">ns_green</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ew_red" type="logic">
+      <obj_property name="ElementShortName">ew_red</obj_property>
+      <obj_property name="ObjectShortName">ew_red</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ew_yellow" type="logic">
+      <obj_property name="ElementShortName">ew_yellow</obj_property>
+      <obj_property name="ObjectShortName">ew_yellow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ew_green" type="logic">
+      <obj_property name="ElementShortName">ew_green</obj_property>
+      <obj_property name="ObjectShortName">ew_green</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/state_dbg" type="array">
+      <obj_property name="ElementShortName">state_dbg[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_dbg[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ns_density" type="array">
+      <obj_property name="ElementShortName">ns_density[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ns_density[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ew_density" type="array">
+      <obj_property name="ElementShortName">ew_density[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ew_density[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ns_red" type="logic">
+      <obj_property name="ElementShortName">ns_red</obj_property>
+      <obj_property name="ObjectShortName">ns_red</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ns_yellow" type="logic">
+      <obj_property name="ElementShortName">ns_yellow</obj_property>
+      <obj_property name="ObjectShortName">ns_yellow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ns_green" type="logic">
+      <obj_property name="ElementShortName">ns_green</obj_property>
+      <obj_property name="ObjectShortName">ns_green</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ew_red" type="logic">
+      <obj_property name="ElementShortName">ew_red</obj_property>
+      <obj_property name="ObjectShortName">ew_red</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ew_yellow" type="logic">
+      <obj_property name="ElementShortName">ew_yellow</obj_property>
+      <obj_property name="ObjectShortName">ew_yellow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/ew_green" type="logic">
+      <obj_property name="ElementShortName">ew_green</obj_property>
+      <obj_property name="ObjectShortName">ew_green</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/state_dbg" type="array">
+      <obj_property name="ElementShortName">state_dbg[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_dbg[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/ns_density" type="array">
+      <obj_property name="ElementShortName">ns_density[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ns_density[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/ew_density" type="array">
+      <obj_property name="ElementShortName">ew_density[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ew_density[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/ns_red" type="logic">
+      <obj_property name="ElementShortName">ns_red</obj_property>
+      <obj_property name="ObjectShortName">ns_red</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/ns_yellow" type="logic">
+      <obj_property name="ElementShortName">ns_yellow</obj_property>
+      <obj_property name="ObjectShortName">ns_yellow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/ns_green" type="logic">
+      <obj_property name="ElementShortName">ns_green</obj_property>
+      <obj_property name="ObjectShortName">ns_green</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/ew_red" type="logic">
+      <obj_property name="ElementShortName">ew_red</obj_property>
+      <obj_property name="ObjectShortName">ew_red</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/ew_yellow" type="logic">
+      <obj_property name="ElementShortName">ew_yellow</obj_property>
+      <obj_property name="ObjectShortName">ew_yellow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/ew_green" type="logic">
+      <obj_property name="ElementShortName">ew_green</obj_property>
+      <obj_property name="ObjectShortName">ew_green</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/state_dbg" type="array">
+      <obj_property name="ElementShortName">state_dbg[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_dbg[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/state" type="array">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/timer" type="array">
+      <obj_property name="ElementShortName">timer[15:0]</obj_property>
+      <obj_property name="ObjectShortName">timer[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/next_timer" type="array">
+      <obj_property name="ElementShortName">next_timer[15:0]</obj_property>
+      <obj_property name="ObjectShortName">next_timer[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/ns_green_target" type="array">
+      <obj_property name="ElementShortName">ns_green_target[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ns_green_target[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/ew_green_target" type="array">
+      <obj_property name="ElementShortName">ew_green_target[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ew_green_target[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/BASE_GREEN" type="array">
+      <obj_property name="ElementShortName">BASE_GREEN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BASE_GREEN[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/DENSITY_STEP" type="array">
+      <obj_property name="ElementShortName">DENSITY_STEP[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DENSITY_STEP[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/YELLOW_TIME" type="array">
+      <obj_property name="ElementShortName">YELLOW_TIME[31:0]</obj_property>
+      <obj_property name="ObjectShortName">YELLOW_TIME[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/ALL_RED_TIME" type="array">
+      <obj_property name="ElementShortName">ALL_RED_TIME[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALL_RED_TIME[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/S_NS_GREEN" type="array">
+      <obj_property name="ElementShortName">S_NS_GREEN[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_NS_GREEN[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/S_NS_YELLOW" type="array">
+      <obj_property name="ElementShortName">S_NS_YELLOW[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_NS_YELLOW[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/S_ALL_RED_1" type="array">
+      <obj_property name="ElementShortName">S_ALL_RED_1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_ALL_RED_1[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/S_EW_GREEN" type="array">
+      <obj_property name="ElementShortName">S_EW_GREEN[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_EW_GREEN[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/S_EW_YELLOW" type="array">
+      <obj_property name="ElementShortName">S_EW_YELLOW[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_EW_YELLOW[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_smart_traffic_controller/dut/S_ALL_RED_2" type="array">
+      <obj_property name="ElementShortName">S_ALL_RED_2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_ALL_RED_2[2:0]</obj_property>
+   </wvobject>
+</wave_config>
