@@ -1,0 +1,125 @@
+`timescale 1ns / 1ps
+// ------------------------------------------------------------
+// Smart Adaptive Traffic Light Controller (NS <-> EW)
+// - Adaptive GREEN time based on 2-bit density inputs
+// - Simple 5-state FSM: NS_G, NS_Y, ALL_RED1, EW_G, EW_Y, ALL_RED2
+// - Timing is in "clock cycles" for easy simulation
+// ------------------------------------------------------------
+module smart_traffic_controller #(
+    parameter integer BASE_GREEN   = 6,   // base green duration
+    parameter integer DENSITY_STEP = 4,   // extra cycles per density level
+    parameter integer YELLOW_TIME  = 3,   // yellow duration
+    parameter integer ALL_RED_TIME = 2    // all-red safety duration
+)(
+    input  wire        clk,
+    input  wire        rst_n,            // active-low reset
+    input  wire [1:0]  ns_density,       // 00=low, 01=med, 10=high, 11=very high
+    input  wire [1:0]  ew_density,       // same encoding for EW
+    output reg         ns_red,
+    output reg         ns_yellow,
+    output reg         ns_green,
+    output reg         ew_red,
+    output reg         ew_yellow,
+    output reg         ew_green,
+    output reg  [2:0]  state_dbg         // for waveform/debug
+);
+
+    // FSM states
+    localparam [2:0]
+        S_NS_GREEN  = 3'd0,
+        S_NS_YELLOW = 3'd1,
+        S_ALL_RED_1 = 3'd2,
+        S_EW_GREEN  = 3'd3,
+        S_EW_YELLOW = 3'd4,
+        S_ALL_RED_2 = 3'd5;
+
+    reg [2:0]  state, next_state;
+    reg [15:0] timer, next_timer;
+
+    // computed green targets
+    wire [15:0] ns_green_target = BASE_GREEN + DENSITY_STEP * ns_density;
+    wire [15:0] ew_green_target = BASE_GREEN + DENSITY_STEP * ew_density;
+
+    // timer tick + state register
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            state <= S_NS_GREEN;
+            timer <= ns_green_target;
+        end else begin
+            state <= next_state;
+            timer <= next_timer;
+        end
+    end
+
+    // next-state & timer logic
+    always @* begin
+        // default hold
+        next_state = state;
+        next_timer = (timer == 0) ? 0 : (timer - 1);
+
+        case (state)
+            S_NS_GREEN: begin
+                if (timer == 0) begin
+                    next_state = S_NS_YELLOW;
+                    next_timer = YELLOW_TIME;
+                end
+            end
+            S_NS_YELLOW: begin
+                if (timer == 0) begin
+                    next_state = S_ALL_RED_1;
+                    next_timer = ALL_RED_TIME;
+                end
+            end
+            S_ALL_RED_1: begin
+                if (timer == 0) begin
+                    next_state = S_EW_GREEN;
+                    next_timer = ew_green_target;
+                end
+            end
+            S_EW_GREEN: begin
+                if (timer == 0) begin
+                    next_state = S_EW_YELLOW;
+                    next_timer = YELLOW_TIME;
+                end
+            end
+            S_EW_YELLOW: begin
+                if (timer == 0) begin
+                    next_state = S_ALL_RED_2;
+                    next_timer = ALL_RED_TIME;
+                end
+            end
+            S_ALL_RED_2: begin
+                if (timer == 0) begin
+                    next_state = S_NS_GREEN;
+                    next_timer = ns_green_target;
+                end
+            end
+            default: begin
+                next_state = S_NS_GREEN;
+                next_timer = ns_green_target;
+            end
+        endcase
+    end
+
+    // outputs (Moore)
+    always @* begin
+        // defaults
+        ns_red    = 1'b0; ns_yellow = 1'b0; ns_green = 1'b0;
+        ew_red    = 1'b0; ew_yellow = 1'b0; ew_green = 1'b0;
+
+        case (state)
+            S_NS_GREEN:  begin ns_green = 1'b1; ew_red = 1'b1; end
+            S_NS_YELLOW: begin ns_yellow= 1'b1; ew_red = 1'b1; end
+            S_ALL_RED_1: begin ns_red   = 1'b1; ew_red = 1'b1; end
+            S_EW_GREEN:  begin ew_green = 1'b1; ns_red = 1'b1; end
+            S_EW_YELLOW: begin ew_yellow= 1'b1; ns_red = 1'b1; end
+            S_ALL_RED_2: begin ns_red   = 1'b1; ew_red = 1'b1; end
+            default:     begin ns_red   = 1'b1; ew_red = 1'b1; end
+        endcase
+    end
+
+    // expose state for debug
+    always @* state_dbg = state;
+
+endmodule
+
