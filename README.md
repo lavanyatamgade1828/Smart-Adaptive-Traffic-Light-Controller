@@ -16,7 +16,7 @@ It is verified through simulation in **Vivado** (Xilinx) and **Icarus Verilog + 
 
 ---
 ## 🖥️ State Diagram
-![State Diagram](docs/state_diagram.png)  
+![State Diagram](https://github.com/lavanyatamgade1828/Smart-Adaptive-Traffic-Light-Controller/blob/main/state_diagram.png)  
 
 FSM cycle:  
 `NS_GREEN → NS_YELLOW → ALL_RED_1 → EW_GREEN → EW_YELLOW → ALL_RED_2 → (back to NS_GREEN)`
